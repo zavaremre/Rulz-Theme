@@ -1,0 +1,151 @@
+@import "../colors";
+$animation-time:0.2s;
+$animation-effect:ease-in-out;
+ 
+/*Owl Carousel Main Slider Start*/
+
+.main-slider-container {
+    .mainslider-wrapper {
+        .main-slider {
+            .owl-item {
+                .main-slider-slider-background {
+                    position: relative; 
+                    z-index: 99;
+                    height: 542px;
+ 
+                }
+
+                .main-slider-content {
+                    display: flex;
+                    flex: 1;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-self: center;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: all 0.5s ease-in-out;
+                    p{
+                        margin: 0;
+                    }
+                }
+
+                .main-slider-layer {
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                &.active .main-slider-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+/*Owl Carousel Main Slider Start*/
+
+.instagram-container {
+    .owl-carousel.owl-theme#instafeed {
+        .owl-dots {
+            right: -3.5rem;
+        }
+    }
+}
+
+/*Owl Carousel Start*/
+.owl-carousel {
+    .owl-item {
+        img {
+            width: inherit;
+            max-width: 440px;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all $animation-time $animation-effect;
+        }
+
+        &.active {
+            img {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.8s ease-in-out;
+            }
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        height: 100%;
+        padding: 0 1rem;
+        margin-top: 0;
+
+        button {
+            display: block !important;
+
+            span {
+                padding: 30px 10px;
+                border: 1px solid $theme-main-color-1;
+                font-size: 40px;
+                line-height: 0;
+                color: $theme-main-color-1;
+                text-align: center;
+                display: block;
+            }
+        }
+
+        [class*=owl-]:hover {
+            background: none;
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        height: 100%;
+        transition: all $animation-time $animation-effect;
+        padding: 0 1rem;
+
+        span {
+            width: 10px;
+            height: 10px;
+            background: $theme-main-color-1 !important;
+            border-radius: 0!important;
+            transition: all $animation-time $animation-effect;
+            transform: rotate(45deg);
+            
+        }
+
+        .active span {
+            transition: all $animation-time $animation-effect;
+            background: $theme-main-color-1;
+            height: 30px;
+            transform: rotate(0);
+            transition: all 0.2s linear;
+        }
+    }
+
+    :hover span {
+        background: inherit;
+    }
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0;
+}
+
+/*Owl Carousel End*/

@@ -1,0 +1,34 @@
+<!--Login Modal Start-->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom border-gray-200">
+                <h5 class="modal-title" id="exampleModalLongTitle">Log in
+                    <span class="small">Welcome again :)</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="material-icons">
+                        close
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="POST" class="needs-validation" novalidate>
+                    <input class="form-control mb-3" type="text" name="user" placeholder="Username" required>
+                    <input class="form-control mb-3" type="password" name="pass" id="pass" placeholder="Password" required>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="rememberme">
+                            <label class="custom-control-label" for="rememberme">Remember Me</label>
+                        </div>
+                        <div class="buttons">
+                            <button type="reset" class="btn btn-outline-warning mr-3">Reset Password</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login Modal Start-->

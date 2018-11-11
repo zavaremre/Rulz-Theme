@@ -1,0 +1,71 @@
+@@include('../modals/register-modal.html')
+ @@include('../modals/login-modal.html')
+ @@include('../modals/search-modal.html')
+<section class="site-wrapper blur-overlay">
+    <div class="topbar bg-dark text-white p-1">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div>Street addresses: 445 Mount Eden Road, Mount Eden, Auckland
+                </div>
+                <div>
+                    <span class="mr-3">info@ravaze.com</span>
+                    <span>+1 9000 00 45 6</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header Start-->
+    <header class="header sticky-top navbar-light bg-white">
+        <nav class="container navbar navbar-light navbar-expand-md p-0">
+            <!--Logo start-->
+            <a href="/index.html" class="navbar-brand p-2">
+              <img src="/assets/img/logo.png" alt="">
+            </a>
+            <!--Logo end-->
+            <!--Mobile menu toggle start-->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mobile_toggle" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Mobile menu toggle end-->
+            <!--Navbar menu start-->
+            <div class="navbar-collapse collapse" id="mobile_toggle">
+                <ul class="navbar-nav justify-content-end w-100">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <!--Right navbar menu start-->
+                <ul class="nav navbar-nav justify-content-between">
+                    <div class="d-flex">
+                        <a class="btn btn-default  border-right-dark btn-sm w-100 mr-3 d-flex align-items-center" href="#" data-toggle="modal" data-target="#registermodal">
+                            <i class="material-icons"> group_add </i></a>
+                        <a class="btn btn-default  border-right-dark btn-sm w-100 mr-3 d-flex align-items-center" href="#" data-toggle="modal" data-target="#loginmodal">
+                            <i class="material-icons"> exit_to_app </i></a>
+                        <a class="btn btn-default  border-right-dark btn-sm  d-flex align-items-center " href="#" data-toggle="modal" data-target="#searchmodal">
+                            <i class="material-icons"> search </i></a>
+                    </div>
+                </ul>
+                <!--Right navbar menu end-->
+            </div>
+            <!--Navbar menu end-->
+        </nav>
+    </header>
+    <!--Header End-->
