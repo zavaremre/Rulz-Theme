@@ -1,0 +1,64 @@
+@@include('../modals/register-modal.html')
+@@include('../modals/login-modal.html')
+<!--Header Start-->
+<header class="header position-absolute w-100">
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <!--Logo start-->
+            <a href="/index.html" class="navbar-brand text-white justify-content-between">
+                <span class="d-inline-block">
+                    Pati Thene
+                </span>
+            </a>
+            <!--Logo end-->
+            <nav class="navbar navbar-dark navbar-expand-md p-0 m-0">
+                <!--Navbar menu start-->
+                <div class="navbar-collapse collapse w-100" id="mobile_toggle">
+                    <ul class="navbar-nav justify-content-center align-items-center
+                        w-100">
+                        <li class="nav-item active">
+                            <a class="nav-link text-primary border-bottom border-primary p-3" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3" href="#">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-3" href="#">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Navbar menu end-->
+                <div class="search mt-1">
+                    <a href="#" class="btn btn-default text-white justify-content-center align-items-center" data-toggle="collapse" data-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
+                        <i class="material-icons m-0 p-1">
+                            search
+                        </i>
+                    </a>
+                </div>
+                <!--Search Bar Start-->
+                <div class="search-bar rounded position-absolute collapse bg-light" id="searchBar">
+                    <div>
+                        <div class="input-group p-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Search Bar End-->
+                <a href="#" class="btn btn-sm btn-primary d-inline-flex justify-content-center align-items-center px-3">
+                    <i class="material-icons mr-2">pets</i>
+                    DISCOVER
+                </a>
+            </nav>
+        </div>
+    </section>
+</header>
+<!--Header End-->

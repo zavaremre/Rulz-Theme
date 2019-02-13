@@ -2,14 +2,10 @@
 <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header border-bottom border-gray-200">
-                <h5 class="modal-title" id="exampleModalLongTitle">Sign up now
-                    <span class="small">Get your place today</span>
-                </h5>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sign up now</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">
-                        close
-                    </i>
+                    <i class="fas fa-window-close"></i>
                 </button>
             </div>
             <div class="modal-body">
@@ -18,22 +14,15 @@
                     <input class="form-control mb-3" type="email" name="email" placeholder="E-Mail Adress" required>
                     <input class="form-control mb-3" type="text" name="firstname" placeholder="First Name" required>
                     <input class="form-control mb-3" type="text" name="lastname" placeholder="Last Name" required>
-                    <input class="form-control mb-3" type="textarea" name="telnumber" id="telnumber" placeholder="Telephone Number" required>
-                    <input class="form-control mb-3" type="url" name="website" id="website" placeholder="Web Site examples:http://google.com">
-                    <textarea class="form-control mb-3" name="bio" rows="2" cols="50" placeholder="Short Biographi"></textarea>
-                    <input class="form-control mb-3" type="password" name="password" id="pass" placeholder="Password" required>
-                    <input class="form-control mb-3" type="password" name="password-repeat" id="passrepeat" placeholder="Password Repeat" required>
-                    <div class="invalid-feedback mb-3">It is obligatory to accept Membership Conditions</div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="membership-agreement" required>
-                            <label class="custom-control-label" for="membership-agreement">Terms of Membership</label>
-                        </div>
-                        <div class="buttons">
-                            <button type="reset" class="btn btn-outline-warning  mr-3">Reset to Form</button>
-                            <button type="submit" class="btn btn-success">Register</button>
-                        </div>
+                    <input class="form-control mb-3" type="password" name="pass" id="pass" placeholder="Password" required>
+                    <input class="form-control mb-3" type="password" name="pass" id="passrepeat" placeholder="Password Repeat" required>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="membership-agreement" required>
+                        <label class="custom-control-label" for="membership-agreement">Terms of Membership</label>
+                        <div class="invalid-feedback">It is obligatory to accept Membership Conditions</div>
                     </div>
+                    <button type="submit" class="btn btn-primary mr-3">Login</button>
+                    <button type="button" class="btn btn-outline-warning">Reset Password</button>
                 </form>
             </div>
         </div>

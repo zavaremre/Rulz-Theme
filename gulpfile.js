@@ -13,18 +13,16 @@
 const gulp = require('gulp'),
     /* ========================= Sass ========================= */
     sass = require('gulp-sass'),
-    cssmin  = require('gulp-cssmin'),
     autoprefixer = require('gulp-autoprefixer'),
-    sequence = require('run-sequence'),
-
- 
+    cssmin = require('gulp-cssmin'),
 
     /* ========================= Babel ========================= */
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
+    neat = require('node-neat');
 
-    /* ========================= Image ========================= */
-    imagemin = require('gulp-imagemin'),
+/* ========================= Image ========================= */
+imagemin = require('gulp-imagemin'),
 
     /* ========================= File Name & Includes ========================= */
     rename = require('gulp-rename'),
@@ -32,11 +30,13 @@ const gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
 
     /* ========================= Eror Reporting ========================= */
+    plumber = require('gulp-plumber'),
 
     /* ========================= Compaile & Server ========================= */
     del = require('del'),
     gulpif = require('gulp-if'),
-     liveServer = require("live-server"),
+    sequence = require('run-sequence'),
+    liveServer = require("live-server"),
 
     /**
      * Output Css & Js File Name and Set Paths
@@ -46,11 +46,10 @@ const gulp = require('gulp'),
     demo = false, //Minified file include
     ThemeName = 'theme',
     path = {
-        base: '../',
+        base: './',
         developmentDir: 'resources',
         productionDir: ThemeName.charAt(0).toUpperCase() + ThemeName.slice(1) + ' HTML'
     };
-
 
 /**
  * Delete the productionDir directory
@@ -74,11 +73,6 @@ gulp.task('html', function () {
         .pipe(gulp.dest(path.base + path.productionDir));
 });
 
-gulp.task('fonts', function () {
-    return gulp.src('node_modules/material-design-icons/iconfont/*')
-        .pipe(gulp.dest(path.base + path.productionDir + '/assets/fonts'));
-})
-
 gulp.task('fileinclude', function () {
     gulp.src(path.developmentDir + '/html/**')
         .pipe(fileinclude({
@@ -89,18 +83,18 @@ gulp.task('fileinclude', function () {
 });
 
 /**
- * Build styles with SASS
+ * Build styles with Style SCSS
  * -----------------------------------------------------------------------------
  */
 
 gulp.task('sass', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
-         //Compile Sass
+    return gulp.src(path.developmentDir + '/sass/**/*.scss')
+        //Compile Sass
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+
         //Add vendor prefixes
         .pipe(autoprefixer({
             browsers: ['last 4 version'],
@@ -115,16 +109,16 @@ gulp.task('sass', function () {
             suffix: '.min'
         }))
         //Save minified file
-        .pipe(gulp.dest(path.base + path.productionDir + '/assets/css/min'));
+        .pipe(gulp.dest(path.base + path.productionDir + '/assets/css'));
 });
 /**
- * Build styles with SASS
+ * Build styles with Bootstrap
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('include', function () {
+gulp.task('bootstrap', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/include/**/*.scss')
+    return gulp.src(path.developmentDir + '/include/bootstrap/*')
         //Compile Sass
         .pipe(sass({
 
@@ -145,7 +139,38 @@ gulp.task('include', function () {
             suffix: '.min'
         }))
         //Save minified file
-        .pipe(gulp.dest(path.base + path.productionDir + '/assets/css/min'));
+        .pipe(gulp.dest(path.base + path.productionDir + '/assets/css'));
+});
+
+/**
+ * Build styles with Plugins
+ * -----------------------------------------------------------------------------
+ */
+
+gulp.task('plugins', function () {
+    //Select files
+    return gulp.src(path.developmentDir + '/include/plugins-bundle.scss')
+        //Compile Sass
+        .pipe(sass({
+
+            outputStyle: 'expanded'
+
+        }))
+        //Add vendor prefixes
+        .pipe(autoprefixer({
+            browsers: ['last 4 version'],
+            cascade: false
+        }))
+        //Save unminified file
+        .pipe(gulpif(!demo, gulp.dest(path.base + path.productionDir + '/assets/css')))
+        //Optimize and minify
+        .pipe(cssmin())
+        //Append suffix
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        //Save minified file
+        .pipe(gulp.dest(path.base + path.productionDir + '/assets/css'));
 });
 
 /**
@@ -153,9 +178,9 @@ gulp.task('include', function () {
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('js', function () {
+gulp.task('pluginsJS', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/babel/*.js')
+    return gulp.src(path.developmentDir + '/babel/plugins-bundle.js')
         //Concatenate includes
         .pipe(include())
         //Transpile
@@ -176,7 +201,38 @@ gulp.task('js', function () {
             suffix: '.min'
         }))
         //Save minified file
-        .pipe(gulp.dest(path.base + path.productionDir + '/assets/js/min'));
+        .pipe(gulp.dest(path.base + path.productionDir + '/assets/js'));
+});
+
+/**
+ * Build scripts with ES6/Babel Bootstrap JS
+ * -----------------------------------------------------------------------------
+ */
+
+gulp.task('bootstrapJS', function () {
+    //Select files
+    return gulp.src(path.developmentDir + '/babel/bootstrap.js')
+        //Concatenate includes
+        .pipe(include())
+        //Transpile
+        .pipe(babel({
+            presets: [
+                ['env', {
+                    loose: true,
+                    modules: false
+                }]
+            ] //'use-strict' deleted
+        }))
+        //Save unminified file
+        .pipe(gulpif(!demo, gulp.dest(path.base + path.productionDir + '/assets/js')))
+        //Optimize and minify
+        .pipe(uglify())
+        //Append suffix
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        //Save minified file
+        .pipe(gulp.dest(path.base + path.productionDir + '/assets/js'));
 });
 
 /**
@@ -205,8 +261,6 @@ gulp.task('vendors', function () {
         .pipe(gulp.dest(path.base + path.productionDir + '/assets/vendors'));
 });
 
-
-
 /**
  * Server
  * -----------------------------------------------------------------------------
@@ -221,24 +275,37 @@ gulp.task('server', function () {
         root: path.base + path.productionDir,
         file: "index.html"
     });
-
-    //Watch for source changes and execute associated tasks
-    gulp.watch(path.developmentDir + '/html/**/*', ['html']);
-    gulp.watch(path.developmentDir + '/html/**', ['fileinclude']);
-    gulp.watch(path.developmentDir + '/node_modules/material-design-icons/iconfont/*', ['fonts']);
-    gulp.watch(path.developmentDir + '/sass/*.scss', ['sass']);
-    gulp.watch(path.developmentDir + '/sass/include/**/*.scss', ['include']);
-    gulp.watch(path.developmentDir + '/babel/**/*.js', ['js']);
-    gulp.watch(path.developmentDir + '/images/**/*', ['images']);
-    gulp.watch(path.developmentDir + '/vendors/**/*', ['vendors']);
-
 });
 
-/** 
+//Watch for source changes and execute associated tasks
+ 
+gulp.watch(path.developmentDir + '/html/**/*', ['html']);
+gulp.watch(path.developmentDir + '/html/**', ['fileinclude']);
+gulp.watch(path.developmentDir + '/sass/**/*.scss', ['sass']);
+gulp.watch(path.developmentDir + '/include/bootstrap/*', ['bootstrap']);
+gulp.watch(path.developmentDir + '/include/plugins-bundle.scss', ['plugins']);
+gulp.watch(path.developmentDir + '/babel/plugins-bundle.js', ['pluginsJS']);
+gulp.watch(path.developmentDir + '/babel/bootstrap.js', ['bootstrapJS']);
+gulp.watch(path.developmentDir + '/images/**/*', ['images']);
+gulp.watch(path.developmentDir + '/vendors/**/*', ['vendors']);
+
+/**
  * Default Task
  * -----------------------------------------------------------------------------
  */
 
 gulp.task('default', function (callback) {
-    return sequence( ['images'],['sass'], ['include'],['html'], ['fileinclude'], ['fonts'], ['js'], ['vendors'],['server'], callback);
+    return sequence(
+        ['clean'],
+        ['fileinclude'],
+        ['sass'],
+        ['bootstrap'],
+ 
+        ['plugins'],
+        ['bootstrapJS'],
+        ['pluginsJS'],
+        ['images'],
+        ['vendors'],
+        ['server'],
+        callback);
 });
