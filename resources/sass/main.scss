@@ -92,7 +92,11 @@
  		}
  	}
  }
-
+.overlay-background{
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.741);
+    background-size: cover;
+}
  #team .card {
  	border: none;
  	background: #ffffff;
