@@ -23,19 +23,40 @@
  	color: $dark;
 
  }
-.line-height-0{
-	line-height: 0!important;
-}
+
+::-webkit-scrollbar-track
+ {
+	 background-color: transparent;
+ }
+ 
+::-webkit-scrollbar
+ {
+	 width: 10px;
+	 background-color:transparent;
+	
+ }
+ 
+::-webkit-scrollbar-thumb
+ {
+	 background-color: $primary;
+ 
+ }
+ .line-height-0 {
+ 	line-height: 0 !important;
+ }
+
  .header {
  	top: 0;
  	left: 0;
  	z-index: 99;
  }
+
  .search-bar {
-	top: 4rem;
-    right: 0;
-    width: 30rem;
-}
+ 	top: 4rem;
+ 	right: 0;
+ 	width: 30rem;
+ }
+
  .slider {
  	.main-slider {
  		.slider-background {
@@ -48,55 +69,54 @@
  				}
  			}
  		}
-		 $dotsColor:#fff;
+
+ 		$dotsColor:#fff;
+
  		.owl-dots {
-			position: absolute;
-			top: 50%;
-			z-index: 99;
-			right: 1%;
-			border:0;
-			transform: rotate(90deg);
-			margin: 0 auto;
-			padding: 0rem 0rem;
- 			border-radius: 100px;
+ 			position: absolute;
+ 			top: 50%;
+ 			z-index: 99;
+ 			right: 1%;
+ 			border: 0;
+ 			transform: rotate(90deg);
+ 			margin: 0 auto;
+ 			padding: 0rem 0rem;
  			display: flex;
  			align-items: center;
  			justify-content: center;
-			&:before {
-				content: '';
-				height: 2px;
-				width: 130%;
-				display: block;
-				background:$dotsColor;
-				position: absolute;
-				bottom: 8px;
-				left: -7px;
-				border-radius: 100px;
-			}
+
+ 			&:before {
+ 				content: '';
+
+ 			}
+
  			.owl-dot {
  				outline: 0;
 
  				&.active {
  					span {
-						 width: 1.5rem;;
- 						background-color: $dotsColor;
+ 						outline: 1px solid white;
+ 						outline-offset: 4px;
  					}
  				}
 
  				span {
-					 transition: all 0.2s linear;
-					 margin: 0.25rem 0.25rem;
+ 					border-radius: 0;
+ 					transition: all 0.2s linear;
+ 					margin: 0rem 10px;
  					background-color: $dotsColor;
  				}
  			}
  		}
  	}
  }
-.overlay-background{
-    background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.741);
-    background-size: cover;
-}
+
+ .overlay-background {
+ 	background-blend-mode: overlay;
+ 	background-color: rgba(255, 255, 255, 0.741);
+ 	background-size: cover;
+ }
+
  #team .card {
  	border: none;
  	background: #ffffff;
