@@ -2,61 +2,104 @@
 @@include('../modals/login-modal.html')
 <!--Header Start-->
 <header class="header position-absolute w-100">
-    <section class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <!--Logo start-->
-            <a href="/index.html" class="navbar-brand text-white justify-content-between">
-                <span class="d-inline-block">
-                    Pati Thene
-                </span>
-            </a>
-            <!--Logo end-->
-            <nav class="navbar navbar-dark navbar-expand-md p-0 m-0">
+    <section class="topbar py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!--Logo start-->
+                <a href="/index.html" class="navbar-brand text-white justify-content-between">
+                    <span class="d-inline-block text-dark">
+                        Pati Thene
+                    </span>
+                </a>
+                <!--Logo end-->
+                <div>
+                    <a href="#" class="btn btn-sm text-dark rounded-0 d-inline-flex justify-content-center align-items-center">
+                        <i class="material-icons mr-2">supervised_user_circle</i>
+                    </a>
+                    <a href="#" class="btn btn-sm text-dark rounded-0 d-inline-flex justify-content-center align-items-center">
+                        <i class="material-icons mr-2">account_circle</i>
+                    </a>
+                    <a href="#" class="btn btn-sm text-dark rounded-0 d-inline-flex justify-content-center align-items-center">
+                        <i class="material-icons mr-2">pie_chart</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-menu bg-white">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-md p-0 m-0">
                 <!--Navbar menu start-->
                 <div class="navbar-collapse collapse w-100" id="mobile_toggle">
                     <ul class="navbar-nav justify-content-center align-items-center
                         w-100">
                         <li class="nav-item active">
-                            <a class="nav-link text-primary border-bottom border-primary p-3" href="#">Home</a>
+                            <a class="nav-link text-uppercase p-3" href="#">
+                                <i class="material-icons d-none d-md-block">home</i>
+                                <span class="d-block d-md-none">Home</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-3" href="#">About Us</a>
+                            <a class="nav-link text-uppercase p-3" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-3" href="#">Services</a>
+                            <a class="nav-link text-uppercase p-3" href="#">Category</a>
+                            <ul class="nav submenu p-3">
+                                <div class="d-flex justify-content-between align-items-start w-100">
+                                    <ul class="nav flex-column w-100">
+                                        <li class="nav-item"><a href="#" class="nav-link p-2 text-primary">Clothing</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Dress</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Skirts</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Playsuits &amp; Jumpsuits</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Shorts</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Lingerie</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Jackets &amp; Coats</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Swimwear</a></li>
+                                    </ul>
+                                    <ul class="nav flex-column w-100">
+                                        <li class="nav-item"><a href="#" class="nav-link p-2 text-primary">Hats</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Сaps</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Bandanas</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Shoes</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Boots</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Socks &amp; Tights</a></li>
+                                    </ul>
+                                    <ul class="nav flex-column w-100">
+                                        <li class="nav-item"><a href="#" class="nav-link p-2 text-primary">Collections</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">New Summer 2018</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Classic And Trends</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Pink And White Style</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Summer Mix On The Beach</a></li>
+                                    </ul>
+                                    <ul class="nav flex-column w-100">
+                                        <li class="nav-item"><a href="#" class="nav-link p-2 text-primary">Accessories</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Sunglasses</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Jewellery</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Bags</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Belts</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Bra Tops</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link p-2">Hair Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-3" href="#">Category</a>
+                            <a class="nav-link text-uppercase p-3" href="#">Product List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-3" href="#">Gallery</a>
+                            <a class="nav-link text-uppercase p-3" href="#">Gallery</a>
                         </li>
                     </ul>
                 </div>
                 <!--Navbar menu end-->
-                <div class="search mt-1">
-                    <a href="#" class="btn btn-default text-white justify-content-center align-items-center" data-toggle="collapse" data-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
-                        <i class="material-icons m-0 p-1">
-                            search
-                        </i>
-                    </a>
-                </div>
-                <!--Search Bar Start-->
-                <div class="search-bar rounded position-absolute collapse bg-light" id="searchBar">
-                    <div>
-                        <div class="input-group p-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-primary" type="button">Search</button>
-                            </div>
-                        </div>
+                <form action="post">
+                    <div class="search-holder d-flex justify-content-center align-items-center">
+                        <input type="text" class="position-relative form-control rounded-0 border border-gray pr-5" placeholder="Search Keywords" aria-label="Search Keywords">
+                            <i class="material-icons position-absolute">
+                                search
+                            </i>
                     </div>
-                </div>
-                <!--Search Bar End-->
-                <a href="#" class="btn btn-sm btn-primary d-inline-flex justify-content-center align-items-center px-3">
-                    <i class="material-icons mr-2">pets</i>
-                    DISCOVER
-                </a>
+                </form>
             </nav>
         </div>
     </section>

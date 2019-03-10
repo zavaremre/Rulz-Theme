@@ -24,23 +24,21 @@
 
  }
 
-::-webkit-scrollbar-track
- {
-	 background-color: transparent;
+ ::-webkit-scrollbar-track {
+ 	background-color: transparent;
  }
- 
-::-webkit-scrollbar
- {
-	 width: 10px;
-	 background-color:transparent;
-	
+
+ ::-webkit-scrollbar {
+ 	width: 10px;
+ 	background-color: transparent;
+
  }
- 
-::-webkit-scrollbar-thumb
- {
-	 background-color: $primary;
- 
+
+ ::-webkit-scrollbar-thumb {
+ 	background-color: $dark;
+
  }
+
  .line-height-0 {
  	line-height: 0 !important;
  }
@@ -49,28 +47,84 @@
  	top: 0;
  	left: 0;
  	z-index: 99;
+
+ 	.navbar {
+ 		.navbar-nav {
+ 			.nav-item {
+ 				&:hover {
+ 					.submenu {
+ 						visibility: visible;
+ 						opacity: 1;
+ 					}
+ 				}
+
+ 				&.active {
+ 					.nav-link {
+ 						color: $primary;
+ 						border-bottom: 2px solid $primary;
+ 					}
+ 				}
+
+ 				.nav-link {
+ 					font-size: 14px;
+ 				}
+
+ 				.submenu {
+ 					transition: all 0.2s ease-in-out;
+ 					position: absolute;
+ 					width: 100%;
+ 					left: 0;
+ 					background: $white;
+ 					visibility: hidden;
+ 					opacity: 0;
+
+ 					.nav-item {
+ 						.nav-link {
+ 							font-size: 14px;
+ 						}
+ 					}
+ 				}
+
+ 			}
+ 		}
+ 	}
  }
 
- .search-bar {
- 	top: 4rem;
- 	right: 0;
- 	width: 30rem;
+ .search-holder {
+ 	i {
+ 		right: 0.5rem;
+ 	}
+
  }
 
  .slider {
+ 	&:after {
+ 		//content: '';
+ 		position: absolute;
+ 		bottom: -50px;
+ 		left: 0;
+ 		z-index: 99;
+ 		width: 100%;
+ 		height: 52px;
+ 		background-image: url(../img/bar.svg);
+ 		background-color: $info;
+ 		background-size: cover;
+ 		background-repeat: no-repeat;
+ 	}
+
  	.main-slider {
  		.slider-background {
- 			height: 500px;
- 			padding-top: 7rem;
+ 			height: 678px;
 
  			.slider-right {
  				img {
- 					width: auto;
+ 					width: 450px !important;
+
  				}
  			}
  		}
 
- 		$dotsColor:#fff;
+ 		$dotsColor:$dark;
 
  		.owl-dots {
  			position: absolute;
@@ -95,7 +149,7 @@
 
  				&.active {
  					span {
- 						outline: 1px solid white;
+ 						outline: 1px solid $dark;
  						outline-offset: 4px;
  					}
  				}
@@ -111,81 +165,49 @@
  	}
  }
 
+ .contact-bar-wrapper {
+ 	.contact-bar {
+ 		position: relative;
+ 		left: auto;
+ 		right: auto;
+ 		z-index: 99;
+ 		margin-top: -2rem;
+ 	}
+ }
+
  .overlay-background {
  	background-blend-mode: overlay;
  	background-color: rgba(255, 255, 255, 0.741);
  	background-size: cover;
  }
 
- #team .card {
- 	border: none;
- 	background: #ffffff;
+ .title-set {
+
+ 	.title {
+ 		font-size: 20px;
+ 	}
+
+ 	.second-title {
+ 		position: absolute;
+ 		top: -2rem;
+ 		opacity: 0.1;
+ 		user-select: none;
+ 	}
+
+ 	.title-border {
+ 		.title-border-inside {
+ 			top: 4px;
+ 		}
+ 	}
+
  }
 
- .image-flip:hover .backside,
- .image-flip.hover .backside {
- 	transform: rotateY(0deg);
- 	border-radius: .25rem;
- }
-
- .image-flip:hover .frontside,
- .image-flip.hover .frontside {
- 	transform: rotateY(180deg);
- }
-
- .mainflip {
- 	transition: 1s;
- 	transform-style: preserve-3d;
- 	position: relative;
- }
-
- .frontside {
- 	position: relative;
- 	-webkit-transform: rotateY(0deg);
- 	-ms-transform: rotateY(0deg);
- 	z-index: 2;
- }
-
- .backside {
- 	position: absolute;
- 	top: 0;
- 	left: 0;
- 	background: white;
- 	-webkit-transform: rotateY(-180deg);
- 	-moz-transform: rotateY(-180deg);
- 	-o-transform: rotateY(-180deg);
- 	-ms-transform: rotateY(-180deg);
- 	transform: rotateY(-180deg);
- 	-webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
- 	-moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
- 	box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
- }
-
- .frontside,
- .backside {
- 	-webkit-backface-visibility: hidden;
- 	-moz-backface-visibility: hidden;
- 	-ms-backface-visibility: hidden;
- 	backface-visibility: hidden;
- 	-webkit-transition: 1s;
- 	-webkit-transform-style: preserve-3d;
- 	-moz-transition: 1s;
- 	-moz-transform-style: preserve-3d;
- 	-o-transition: 1s;
- 	-o-transform-style: preserve-3d;
- 	-ms-transition: 1s;
- 	-ms-transform-style: preserve-3d;
- 	transition: 1s;
- 	transform-style: preserve-3d;
- }
-
- .frontside .card,
- .backside .card {
- 	min-height: 312px;
- }
-
- .frontside .card .card-body img {
- 	width: 120px;
- 	height: 120px;
- 	border-radius: 50%;
+ .icon-box {
+ 	.image {
+ 		a {
+ 			img {
+ 				width: 100px
+ 			}
+ 		}
+ 	}
  }
