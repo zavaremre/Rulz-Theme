@@ -14,11 +14,11 @@
 ============================================================================================
 
 /* =============== Include Plugins =============== */
- //=require ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
- //=require ../../node_modules/owl.carousel/dist/owl.carousel.js
- //=require ../../node_modules/aos/dist/aos.js
+	//=require ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
+	//=require ../../node_modules/swiper/dist/js/swiper.js
+	//=require ../../node_modules/aos/dist/aos.js
 /* =============== Include Plugins =============== */  
 
 /* =============== Custom Include Js =============== */
- //=require /_config.js
+	 //=require /_config.js
 /* =============== Custom Include Js =============== */  

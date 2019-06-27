@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!--Head Start-->
 
 <head>
@@ -17,39 +16,29 @@
     <!--Basic seo optimization end-->
     <meta name="viewport" content="width=device-width, initial-scale=1
             ,user-scalable=no">
-    <link rel="shortcut icon" href="/img/assets/img/favicon.png" />
-    @@include('./lib/css.html')
+    <link rel="shortcut icon" href="/img/assets/img/favicon.png" /> @@include('./lib/css.html')
 </head>
 <!--Head End-->
 
-<body>
-    @@include('./lib/header/header.html')
+<body> @@include('./lib/header/header.html')
     <!--Main Content Start-->
     <main>
         <!--Main Slider Start-->
-        <div class="slider position-relative">
-            <div class="main-slider owl-carousel owl-theme">
-                <div class="item">
+        <div class="main-slider swiper-container position-relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <!--Slider Background Start-->
                     <div class="slider-background bg-light">
                         <div class="container h-100">
                             <!--Slider Inner Content Start-->
                             <div class="d-flex justify-content-between align-items-center w-100 h-100">
                                 <div class="slider-left w-100 text-dark">
-                                    <h3 class="text-uppercase"><span class="text-dark">Don't </span>leave them alone</h3>
-                                    <p class="p-0">Pellentesque quis pulvinar quam, at
-                                        molestie tellus. Nunc id eleifend
-                                        purus, a viverra ex. Ut lacinia
-                                        justo at elit hendrerit ultricies.
-                                        In bibendum velit et nunc euismod
-                                        feugiat.</p>
-                                    <a href="#" class="btn btn-primary rounded-0 d-inline-flex justify-content-center align-items-center px-3">
-                                        Discover
-                                    </a>
-
+                                    <h3 class="text-uppercase"><span class="text-dark">Best seller of the month </span></h3>
+                                    <p class="p-0">Pellentesque quis pulvinar quam, at molestie tellus. Nunc id eleifend purus, a viverra ex. Ut lacinia justo at elit hendrerit ultricies. In bibendum velit et nunc euismod feugiat.</p>
+                                    <a href="#" class="btn btn-primary rounded-0 d-inline-flex justify-content-center align-items-center px-3"> Discover </a>
                                 </div>
                                 <div class="slider-right d-flex justify-content-end align-items-end w-100 h-100">
-                                    <img class="w-100" src="assets/img/slider/2.png" alt="" data-aos="zoom-in">
+                                    <img class="w-100" src="assets/img/slider/2.png" alt="" >
                                 </div>
                             </div>
                             <!--Slider Inner Content End-->
@@ -65,177 +54,78 @@
             <div class="container">
                 <div class="contact-bar-wrapper">
                     <form action="" method="get">
-                        <div class="contact-bar d-flex justify-content-between align-items-center bg-white shadow p-3 ">
-                            <p class="text-dark ml-3 mb-0">Leave your <strong>phone number</strong>, we will call you</p>
-                            <div class=" d-flex justify-content-between align-items-center">
-                                <input type="text" class="form-control mr-3 rounded-0" placeholder="Name" required>
-                                <input type="email" class="form-control mr-3 rounded-0" placeholder="E-Mail" required>
-                                <input type="number" class="form-control mr-3 rounded-0" placeholder="Telephone Number" required>
-                                <button type="submit" class="btn btn-primary d-flex justify-content-between align-items-center rounded-0">
-                                    <i class="material-icons mr-2">
-                                        settings_input_antenna
-                                    </i>Send</button>
+                        <div class="contact-bar d-flex justify-content-between align-items-center bg-white shadow p-3 rounded-100">
+                            <p class="text-dark ml-3 mb-0 w-50">Leave your <strong>phone number</strong>, we will call you</p>
+                            <div class=" d-flex justify-content-between align-items-center w-100">
+                                <select name="category" id="" class="form-control rounded-100 mr-3 w-100">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="">Clothing</option>
+                                    <option value="">Hats</option>
+                                    <option value="">Collections</option>
+                                    <option value="">Accessories</option>
+                                </select>
+                                <select name="subCategory" id="" class="form-control rounded-100 mr-3 w-100">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="">Clothing</option>
+                                    <option value="">Dress</option>
+                                    <option value="">Skirts</option>
+                                    <option value="">Playsuits &amp; Jumpsuits</option>
+                                    <option value="">Shorts</option>
+                                    <option value="">Lingerie</option>
+                                    <option value="">Jackets &amp; Coats</option>
+                                    <option value="">Swimwear</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary d-flex justify-content-between align-items-center rounded-100 px-5">
+                                    <i class="material-icons mr-2"> settings_input_antenna </i>Search</button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
         </section>
         <div class="container ">
             <div class="row">
-                <div class="col-md-3 px-0 pl-3">
-                    <!--Product Box Start-->
-                    <div class="box mt-3">
-                        <!--Product Image Start-->
-                        <div class="images">
-                            <a href="#">
-                                <img class="w-100" src="assets/img/box/4.jpg" alt="">
-                            </a>
-                        </div>
-                        <!--Product Image End-->
-                        <!--Product Title Start-->
-                        <div class="title mt-2">
-                            <a class="text-dark" href="#">Lighthouse Lantern</a>
-                        </div>
-                        <!--Product Title End-->
-                        <!--Product Price Start-->
-                        <div class="price mt-2">
-                            <small>30.000</small>
-                            <span class="text-primary ml-2">35.000</span>
-                        </div>
-                        <!--Product Price End-->
-                        <!--Product Btns Start-->
-                        <div class="btns mt-2">
-                            <button class="btn btn-sm btn-outline-primary d-flex justify-content-between align-items-center">
-                                <i class="material-icons mr-2">add_circle_outline</i>
-                                Add the Cart
-                            </button>
-
-                        </div>
-                        <!--Product Btns End-->
-                    </div>
-                    <!--Product Box End-->
-                </div>
-                <div class="col-md-3 px-0 pl-3">
-                    <!--Product Box Start-->
-                    <div class="box mt-3">
-                        <!--Product Image Start-->
-                        <div class="images">
-                            <a href="#">
-                                <img class="w-100" src="assets/img/box/4.jpg" alt="">
-                            </a>
-                        </div>
-                        <!--Product Image End-->
-                        <!--Product Title Start-->
-                        <div class="title mt-2">
-                            <a class="text-dark" href="#">Lighthouse Lantern</a>
-                        </div>
-                        <!--Product Title End-->
-                        <!--Product Price Start-->
-                        <div class="price mt-2">
-                            <small>30.000</small>
-                            <span class="text-primary ml-2">35.000</span>
-                        </div>
-                        <!--Product Price End-->
-                        <!--Product Btns Start-->
-                        <div class="btns mt-2">
-                            <button class="btn btn-sm btn-outline-primary d-flex justify-content-between align-items-center">
-                                <i class="material-icons mr-2">add_circle_outline</i>
-                                Add the Cart
-                            </button>
-
-                        </div>
-                        <!--Product Btns End-->
-                    </div>
-                    <!--Product Box End-->
-                </div>
-                <div class="col-md-3 px-0 pl-3">
-                    <!--Product Box Start-->
-                    <div class="box mt-3">
-                        <!--Product Image Start-->
-                        <div class="images">
-                            <a href="#">
-                                <img class="w-100" src="assets/img/box/4.jpg" alt="">
-                            </a>
-                        </div>
-                        <!--Product Image End-->
-                        <!--Product Title Start-->
-                        <div class="title mt-2">
-                            <a class="text-dark" href="#">Lighthouse Lantern</a>
-                        </div>
-                        <!--Product Title End-->
-                        <!--Product Price Start-->
-                        <div class="price mt-2">
-                            <small>30.000</small>
-                            <span class="text-primary ml-2">35.000</span>
-                        </div>
-                        <!--Product Price End-->
-                        <!--Product Btns Start-->
-                        <div class="btns mt-2">
-                            <button class="btn btn-sm btn-outline-primary d-flex justify-content-between align-items-center">
-                                <i class="material-icons mr-2">add_circle_outline</i>
-                                Add the Cart
-                            </button>
-
-                        </div>
-                        <!--Product Btns End-->
-                    </div>
-                    <!--Product Box End-->
-                </div>
+                <div class="col-md-3 px-0 pl-3"> @@include('./lib/product/product.html') </div>
+                <div class="col-md-3 px-0 pl-3"> @@include('./lib/product/product.html') </div>
+                <div class="col-md-3 px-0 pl-3"> @@include('./lib/product/product.html') </div>
+                <div class="col-md-3 px-0 pl-3"> @@include('./lib/product/product.html') </div>
             </div>
-        </div>
-
-        <!--Contact Bar End-->
-        <section class="overlay-background py-5" style="background-image:url(../assets/img/bg-overlay.png)">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                        <div class="banner-box">
-                            <img class="w-100" src="assets/img/box/1.jpg" alt="">
+            <!--Contact Bar End-->
+            <section class="overlay-background py-5" style="background-image:url(../assets/img/bg-overlay.png)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="banner-box">
+                                <img class="w-100" src="assets/img/box/1.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                        <div class="banner-box">
-                            <img class="w-100" src="assets/img/box/2.jpg" alt="">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="banner-box">
+                                <img class="w-100" src="assets/img/box/2.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                        <div class="banner-box">
-                            <img class="w-100" src="assets/img/box/3.jpg" alt="">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="banner-box">
+                                <img class="w-100" src="assets/img/box/3.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Team -->
-        <section class="bg-light py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <img src="/Theme HTML/assets/img" alt="">
-                    </div>
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                        Pellentesque sit amet lobortis justo. Aliquam leo velit, maximus id dignissim sit amet, fermentum id quam. Vestibulum feugiat scelerisque ante sit amet scelerisque. Pellentesque pharetra, libero at dignissim volutpat, elit magna iaculis neque, quis consectetur orci leo in mauris. Mauris sit amet tincidunt justo. Integer sed nibh massa. Cras rutrum erat eleifend neque lacinia, et pulvinar enim tempus. Fusce diam mi, vestibulum a turpis semper, finibus vestibulum sapien. Pellentesque sit amet commodo nibh, in bibendum erat. Mauris consequat augue ultrices risus cursus facilisis. Vestibulum vel dictum nisi, at ullamcorper elit. Sed convallis mi sed varius consectetur. Suspendisse quis enim pulvinar, maximus purus quis, dignissim felis.
-
-
+            </section>
+            <!-- Team -->
+            <section class="bg-light py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <img src="/Theme HTML/assets/img" alt="">
+                        </div>
+                        <div class="col-sm-8 col-md-8 col-lg-8"> Pellentesque sit amet lobortis justo. Aliquam leo velit, maximus id dignissim sit amet, fermentum id quam. Vestibulum feugiat scelerisque ante sit amet scelerisque. Pellentesque pharetra, libero at dignissim volutpat, elit magna iaculis neque, quis consectetur orci leo in mauris. Mauris sit amet tincidunt justo. Integer sed nibh massa. Cras rutrum erat eleifend neque lacinia, et pulvinar enim tempus. Fusce diam mi, vestibulum a turpis semper, finibus vestibulum sapien. Pellentesque sit amet commodo nibh, in bibendum erat. Mauris consequat augue ultrices risus cursus facilisis. Vestibulum vel dictum nisi, at ullamcorper elit. Sed convallis mi sed varius consectetur. Suspendisse quis enim pulvinar, maximus purus quis, dignissim felis. </div>
                     </div>
                 </div>
-
-            </div>
-        </section>
-        <!-- Team -->
-
+            </section>
+            <!-- Team -->
     </main>
-    <!--Main Content End-->
-
-    <!--Footer Start-->
-    @@include('./lib/footer/footer.html')
-    <!--Footer End-->
-
-    <!--Scripts Start-->
-    @@include('./lib/script.html')
-    <!--Scripts End-->
+    <!--Main Content End--> @@include('./lib/footer/footer.html') @@include('./lib/script.html')
 </body>
 
 </html>

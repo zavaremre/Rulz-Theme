@@ -1,40 +1,19 @@
 'use strict';
+ 
 (function () {
-  AOS.init();
+ 
 
-//owl-carousel start
-$('.main-slider').owlCarousel({
-  lazyLoad: false,
-  items: 1, 
-  loop: true,
-  rewind: false,
-  margin: 0,
-  merge: false,
-  autoWidth: false,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: false,
-  nav: false,
-  dots: true,
-  responsive: {
-    // breakpoint from 480 up
-    0: {
-      items: 1,
-      nav: false,
-      dots: false,
+  var swiper = new Swiper('.main-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    // breakpoint from 768 up
-    768: {
-      items: 1,
-    } 
-  }
+  });
 
-});
-//owl-carousel end
 //fancy box 3 start
 $('[data-fancybox="gallery"]').fancybox({
   hash:false,
-  // Open/close animation type
+  // Open/close animation type 
   // Possible values:
   //   false            - disable
   //   "zoom"           - zoom images from/to thumbnail
