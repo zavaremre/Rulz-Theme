@@ -2,8 +2,17 @@
  
 (function () {
  
-
+ 
   var swiper = new Swiper('.main-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var swiper2 = new Swiper('.featured-product-carousel', {
+    slidesPerView: 4,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

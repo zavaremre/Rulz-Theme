@@ -16,7 +16,7 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #666 !default;
+$gray-800: #171933 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -37,14 +37,14 @@ $grays: map-merge(
   $grays   
 ); 
   
-$blue:   #e26788  !default;   
+$blue:   #e05c88  !default;   
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #ec4d25 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$green:   #6ebd71 !default;
+$green:   #4CAF50 !default;
 $teal:    #20c997 !default;
 $cyan:    #03a9f4 !default;
 
@@ -70,12 +70,12 @@ $colors: map-merge(
 );
 
 $primary:       $blue !default;
-$secondary:     rgba(255, 255, 255, 0.58) !default;
+$secondary:    #e91e63 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #f7f7f7 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -109,7 +109,7 @@ $yiq-text-light:            $white !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -296,9 +296,9 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        'Noto Serif'!default;
+$headings-font-family:        'Lora'!default;
 $headings-font-weight:        700 !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1.7 !default;
 $headings-color:              inherit !default;
 
 $display1-size:               6rem !default;
@@ -379,7 +379,7 @@ $input-btn-padding-x:         .75rem !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
