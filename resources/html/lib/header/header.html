@@ -1,31 +1,41 @@
-@@include('../modals/register-modal.html') @@include('../modals/login-modal.html')
+<!--=include ../modals/register-modal.html -->
+<!--=include ../modals/login-modal.html -->
 <!--Header Start-->
 <header class="header w-100">
     <section class="main-menu bg-white">
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-md p-0 m-0">
-                <!--Navbar menu start-->
-                <div class="navbar-collapse collapse w-100" id="mobile_toggle">
-                    <ul class="navbar-nav justify-content-center align-items-center  w-100">
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase p-3 font-weight-bold" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase p-3 font-weight-bold" href="#">Pages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase p-3 font-weight-bold" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase p-3 font-weight-bold" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase p-3 font-weight-bold" href="#">Contact</a>
-                        </li>
-                    </ul>
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="left-content">
                 </div>
-                <!--Navbar menu end-->
-            </nav>
+                <nav class="navbar navbar-light navbar-expand-md p-0 m-0">
+                    <!--Navbar menu start-->
+                    <div class="navbar-collapse collapse w-100" id="mobile_toggle">
+                        <ul class="navbar-nav justify-content-center align-items-center  w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link text-uppercase p-4 font-weight-bold" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase p-4 font-weight-bold" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase p-4 font-weight-bold" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase p-4 font-weight-bold" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase p-4 font-weight-bold" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Navbar menu end-->
+                </nav>
+                <div class="right-content">
+                    <button class="btn btn-sm btn-dark">
+                        <i class="material-icons"> shopping_basket </i>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 </header>

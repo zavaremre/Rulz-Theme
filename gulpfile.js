@@ -19,22 +19,21 @@ const gulp = require('gulp'),
     /* ========================= Babel ========================= */
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
-    neat = require('node-neat');
 
-/* ========================= Image ========================= */
-imagemin = require('gulp-imagemin'),
+
+    /* ========================= Image ========================= */
+    imagemin = require('gulp-imagemin'),
 
     /* ========================= File Name & Includes ========================= */
     rename = require('gulp-rename'),
-    include = require('gulp-include'),
-    fileinclude = require('gulp-file-include'),
+    include = require('gulp-include')
 
-    /* ========================= Eror Reporting ========================= */
-    plumber = require('gulp-plumber'),
+/* ========================= Eror Reporting ========================= */
 
-    /* ========================= Compaile & Server ========================= */
-    del = require('del'),
-    gulpif = require('gulp-if'),
+
+/* ========================= Compaile & Server ========================= */
+
+gulpif = require('gulp-if'),
     sequence = require('run-sequence'),
     liveServer = require("live-server"),
 
@@ -56,26 +55,22 @@ imagemin = require('gulp-imagemin'),
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('clean', function () {
-    return del(path.base + path.productionDir, {
-        force: true
-    });
-});
+
 /**
  * Copy Html files
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('html', function () {
-    //Select files
-    return gulp.src(path.developmentDir + '/html/**/*')
-        //Save files
-        .pipe(gulp.dest(path.base + path.productionDir));
-});
 
-gulp.task('fileinclude', function () {
+
+
+ 
+
+
+
+gulp.task('include', function () {
     gulp.src(path.developmentDir + '/html/**')
-        .pipe(fileinclude({
+        .pipe(include({
             prefix: '@@',
             basepath: '@file'
         }))
@@ -89,7 +84,7 @@ gulp.task('fileinclude', function () {
 
 gulp.task('sass', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/**/*.scss')
+    return gulp.src(path.developmentDir + '/sass/**')
         //Compile Sass
         .pipe(sass({
             outputStyle: 'expanded'
@@ -180,7 +175,7 @@ gulp.task('plugins', function () {
 
 gulp.task('pluginsJS', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/babel/plugins-bundle.js')
+    return gulp.src(path.developmentDir + '/babel/*')
         //Concatenate includes
         .pipe(include())
         //Transpile
@@ -278,13 +273,14 @@ gulp.task('server', function () {
 });
 
 //Watch for source changes and execute associated tasks
- 
-gulp.watch(path.developmentDir + '/html/**/*', ['html']);
-gulp.watch(path.developmentDir + '/html/**', ['fileinclude']);
-gulp.watch(path.developmentDir + '/sass/**/*.scss', ['sass']);
+
+
+gulp.watch(path.developmentDir + '/html/**', ['include']);
+gulp.watch(path.developmentDir + '/sass/**', ['sass']);
 gulp.watch(path.developmentDir + '/include/bootstrap/*', ['bootstrap']);
 gulp.watch(path.developmentDir + '/include/plugins-bundle.scss', ['plugins']);
-gulp.watch(path.developmentDir + '/babel/plugins-bundle.js', ['pluginsJS']);
+
+gulp.watch(path.developmentDir + '/babel/*', ['pluginsJS']);
 gulp.watch(path.developmentDir + '/babel/bootstrap.js', ['bootstrapJS']);
 gulp.watch(path.developmentDir + '/images/**/*', ['images']);
 gulp.watch(path.developmentDir + '/vendors/**/*', ['vendors']);
@@ -296,11 +292,10 @@ gulp.watch(path.developmentDir + '/vendors/**/*', ['vendors']);
 
 gulp.task('default', function (callback) {
     return sequence(
-        ['clean'],
-        ['fileinclude'],
+        
+        ['include'],
         ['sass'],
         ['bootstrap'],
- 
         ['plugins'],
         ['bootstrapJS'],
         ['pluginsJS'],

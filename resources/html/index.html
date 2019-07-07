@@ -16,29 +16,31 @@
     <!--Basic seo optimization end-->
     <meta name="viewport" content="width=device-width, initial-scale=1
             ,user-scalable=no">
-    <link rel="shortcut icon" href="/img/assets/img/favicon.png" /> @@include('./lib/css.html')
+    <link rel="shortcut icon" href="/img/assets/img/favicon.png" />
+    <!--=include ./lib/css.html -->
 </head>
 <!--Head End-->
- 
-<body> @@include('./lib/header/header.html')
-    <!--Main Content Start--> 
+
+<body>
+    <!--=include ./lib/header/header.html -->
+    <!--Main Content Start-->
     <main>
-        <section>
+        <section class="bg-light p-4 mb-4">
             <div class="container">
-                <!--Main Slider Start--> 
-                <div class="main-slider swiper-container position-relative">
-                    <div class="swiper-wrapper"> 
+                <!--Main Slider Start-->
+                <div class="main-slider swiper-container position-relative ">
+                    <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <!--Slider Background Start-->
-                            <div class="slider-background d-flex justify-content-between align-items-center h-100 p-5" style="background-color: #f7faff">
+                            <div class="slider-background d-flex justify-content-between align-items-center h-100" style="background-color: #f7faff">
                                 <!--Slider Inner Content Start-->
-                                <div class="slider-left w-50">
+                                <div class="slider-left w-100 p-5">
                                     <small class="d-block font-weight-bold text-danger mb-3">VIRTUAL REALITY</small>
-                                    <h3 class="text-uppercase text-primary mb-3"><span>Best seller of the month </span></h3>
-                                    <h6 class="mb-3">Pellentesque quis pulvinar quam, at molestie tellus. Nunc id eleifend purus, a viverra ex. Ut lacinia justo at elit hendrerit ultricies. In bibendum velit et nunc euismod feugiat.</h6>
-                                    <a href="#" class="btn btn-primary d-inline-flex justify-content-center align-items-center"> Discover </a>
+                                    <h3 class="text-uppercase text-dark mb-3"><span>Best seller of the month </span></h3>
+                                    <p> Pellentesque quis pulvinar quam, at molestie tellus. Nunc id eleifend purus, a viverra ex. Ut lacinia justo at elit hendrerit ultricies. In bibendum velit et nunc euismod feugiat. </p>
+                                    <a href="#" class="btn btn-outline-dark d-inline-flex justify-content-center align-items-center"> Discover </a>
                                 </div>
-                                <div class="slider-right d-flex justify-content-end align-items-end">
+                                <div class="slider-right d-flex justify-content-end align-items-end h-100   ">
                                     <img src="assets/img/slider/2.png" alt="">
                                 </div>
                                 <!--Slider Inner Content End-->
@@ -51,13 +53,14 @@
             </div>
         </section>
         <!--Contact Bar Start-->
-        <section>
+        <section class="d-none">
             <div class="container">
                 <div class="detail-search-wrapper">
                     <form action="" method="get">
-                        <div class="detail-search d-flex justify-content-between align-items-center bg-white py-4">
+                        <div class="detail-search d-flex justify-content-between align-items-center pb-4">
                             <p class="mb-0 w-50">Leave your <strong>phone number</strong>, we will call you</p>
                             <div class="d-flex justify-content-between align-items-center w-100">
+                                <input type="text" class="form-control w-100 mr-3" placeholder="Search Keywords...">
                                 <select name="category" id="" class="form-control w-100 mr-3 ">
                                     <option value="" disabled selected>Select</option>
                                     <option value="">Clothing</option>
@@ -76,192 +79,428 @@
                                     <option value="">Jackets &amp; Coats</option>
                                     <option value="">Swimwear</option>
                                 </select>
-                                <button type="submit" class="btn btn-primary d-flex justify-content-between align-items-center px-5">
-                                    <i class="material-icons mr-2"> settings_input_antenna </i>Search</button>
+                                <button type="submit" class="btn btn-dark d-flex justify-content-between align-items-center px-3">
+                                    <i class="material-icons mr-3"> search </i>Search</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
-        <section class="toolbar">
+        <section class="mb-4">
             <div class="container">
-                <h6 class="p-3 bg-light mb-4">Women 2019 Fasion's</h6>
-            </div>
-        </section>
-        <div class="container mb-3">
-            <div class="featured-product-carousel swiper-container position-relative">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <!--Product Box Start-->
-                        <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
-                            <!--Product Image Start-->
-                            <div class="images">
-                                <a href="#">
-                                    <img class="first-image w-100" src="assets/img/product/women/1.jpg" alt="">
-                                    <img class="second-image w-100" src="assets/img/product/women/f1.jpg" alt="">
-                                </a>
-                            </div>
-                            <!--Product Image End-->
-                           <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
-                                <!--Product Title Start-->
-                                <div class="title mt-2">
-                                    <a class="text-dark" href="#">Lighthouse Lantern</a>
-                                </div>
-                                <!--Product Title End-->
-                                <!--Product Price Start-->
-                                <div class="price mt-2">
-                                    <del>30.000</del>
-                                    <span class="text-primary ml-2">35.000</span>
-                                </div>
-                                <!--Product Price End-->
-                                <!--Product Btns Start-->
-                                <div class="add-the-cart my-3">
-                                    <button class="btn btn-sm btn-outline-primary flex-fill d-flex justify-content-between align-items-center w-100 ">
-                                        <i class="material-icons mr-2">add_circle_outline</i> Add the Cart </button>
-                                </div>
-                                <!--Product Btns End-->
-                            </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box d-flex flex-column justify-content-between align-items-center  p-3" style="background-color:#fddce3">
+                            <img class="w-50" src="assets/img/banner1.png" alt="">
+                            <h6>Free Cargo </h6>
+                            <p>Ea voluptas debitis ad incidunt numquam illo</p>
+                            <a href="#" class="btn btn-sm btn-light">Read More</a>
                         </div>
-                        <!--Product Box End-->
                     </div>
-                    <div class="swiper-slide">
-                        <!--Product Box Start-->
-                        <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
-                            <!--Product Image Start-->
-                            <div class="images">
-                                <a href="#">
-                                    <img class="first-image w-100" src="assets/img/product/women/2.jpg" alt="">
-                                    <img class="second-image w-100" src="assets/img/product/women/f2.jpg" alt="">
-                                </a>
-                            </div>
-                            <!--Product Image End-->
-                            <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
-                                <!--Product Title Start-->
-                                <div class="title mt-2">
-                                    <a class="text-dark" href="#">Lighthouse Lantern</a>
-                                </div>
-                                <!--Product Title End-->
-                                <!--Product Price Start-->
-                                <div class="price mt-2">
-                                    <del>30.000</del>
-                                    <span class="text-primary ml-2">35.000</span>
-                                </div>
-                                <!--Product Price End-->
-                                <!--Product Btns Start-->
-                                <div class="add-the-cart my-3">
-                                    <button class="btn btn-sm btn-outline-primary flex-fill d-flex justify-content-between align-items-center w-100 ">
-                                        <i class="material-icons mr-2">add_circle_outline</i> Add the Cart </button>
-                                </div>
-                                <!--Product Btns End-->
-                            </div>
+                    <div class="col-md-4">
+                        <div class="box d-flex flex-column justify-content-between align-items-center  p-3" style="background-color:#bce1f1">
+                            <img class="w-50" src="assets/img/banner2.png" alt="">
+                            <h6>Free Cargo </h6>
+                            <p> Id, neque voluptate. Id nostrum nihil iure.</p>
+                            <a href="#" class="btn btn-sm btn-light">Read More</a>
                         </div>
-                        <!--Product Box End-->
                     </div>
-                    <div class="swiper-slide">
-                        <!--Product Box Start-->
-                        <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
-                            <!--Product Image Start-->
-                            <div class="images">
-                                <a href="#">
-                                    <img class="first-image w-100" src="assets/img/product/women/3.jpg" alt="">
-                                    <img class="second-image w-100" src="assets/img/product/women/f3.jpg" alt="">
-                                </a>
-                            </div>
-                            <!--Product Image End-->
-                           <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
-                                <!--Product Title Start-->
-                                <div class="title mt-2">
-                                    <a class="text-dark" href="#">Lighthouse Lantern</a>
-                                </div>
-                                <!--Product Title End-->
-                                <!--Product Price Start-->
-                                <div class="price mt-2">
-                                    <del>30.000</del>
-                                    <span class="text-primary ml-2">35.000</span>
-                                </div>
-                                <!--Product Price End-->
-                                <!--Product Btns Start-->
-                                <div class="add-the-cart my-3">
-                                    <button class="btn btn-sm btn-outline-primary flex-fill d-flex justify-content-between align-items-center w-100 ">
-                                        <i class="material-icons mr-2">add_circle_outline</i> Add the Cart </button>
-                                </div>
-                                <!--Product Btns End-->
-                            </div>
+                    <div class="col-md-4">
+                        <div class="box d-flex flex-column justify-content-between align-items-center  p-3" style="background-color:#bcf1bc">
+                            <img class="w-50" src="assets/img/banner3.png" alt="">
+                            <h6>Free Cargo </h6>
+                            <p>Lorem ipsum dolor sit, amet consectetur </p>
+                            <a href="#" class="btn btn-sm btn-light">Read More</a>
                         </div>
-                        <!--Product Box End-->
-                    </div>
-                    <div class="swiper-slide">
-                        <!--Product Box Start-->
-                        <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
-                            <!--Product Image Start-->
-                            <div class="images">
-                                <a href="#">
-                                    <img class="first-image w-100" src="assets/img/product/women/4.jpg" alt="">
-                                    <img class="second-image w-100" src="assets/img/product/women/f4.jpg" alt="">
-                                </a>
-                            </div>
-                            <!--Product Image End-->
-                           <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
-                                <!--Product Title Start-->
-                                <div class="title mt-2">
-                                    <a class="text-dark" href="#">Lighthouse Lantern</a>
-                                </div>
-                                <!--Product Title End-->
-                                <!--Product Price Start-->
-                                <div class="price mt-2">
-                                    <del>30.000</del>
-                                    <span class="text-primary ml-2">35.000</span>
-                                </div>
-                                <!--Product Price End-->
-                                <!--Product Btns Start-->
-                                <div class="add-the-cart my-3">
-                                    <button class="btn btn-sm btn-outline-primary flex-fill d-flex justify-content-between align-items-center w-100 ">
-                                        <i class="material-icons mr-2">add_circle_outline</i> Add the Cart </button>
-                                </div>
-                                <!--Product Btns End-->
-                            </div>
-                        </div>
-                        <!--Product Box End-->
-                    </div>
-                    <div class="swiper-slide">
-                        <!--Product Box Start-->
-                        <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
-                            <!--Product Image Start-->
-                            <div class="images"> 
-                                <a href="#">
-                                    <img class="first-image w-100" src="assets/img/product/women/5.jpg" alt="">
-                                    <img class="second-image w-100" src="assets/img/product/women/f5.jpg" alt="">
-                                </a>
-                            </div>
-                            <!--Product Image End-->
-                           <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
-                                <!--Product Title Start-->
-                                <div class="title mt-2">
-                                    <a class="text-dark" href="#">Lighthouse Lantern</a>
-                                </div>
-                                <!--Product Title End-->
-                                <!--Product Price Start-->
-                                <div class="price mt-2">
-                                    <del>30.000</del>
-                                    <span class="text-primary ml-2">35.000</span>
-                                </div>
-                                <!--Product Price End-->
-                                <!--Product Btns Start-->
-                                <div class="add-the-cart my-3">
-                                    <button class="btn btn-sm btn-outline-primary flex-fill d-flex justify-content-between align-items-center w-100 ">
-                                        <i class="material-icons mr-2">add_circle_outline</i> Add the Cart </button>
-                                </div>
-                                <!--Product Btns End-->
-                            </div>
-                        </div>
-                        <!--Product Box End-->
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section>
+            <div class="container mb-4">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="category-banner d-flex flex-column justify-content-center align-items-center text-center text-dark w-100 h-100 p-4" style="background-image: url('assets/img/product/womenCat.jpg')">
+                            <h6> Women Special 2019 Fasihon's</h6>
+                            <a href="#" class="btn btn-sm btn-outline-dark mt-4">All Collections</a>
+                            <div class="slider-navigation d-flex justify-content-center align-items-center mt-4">
+                                <button class="featured-product-carousel-prev btn btn-sm btn-link-dark text-decoration-none d-flex justify-content-center align-items-center">
+                                    <i class="material-icons"> chevron_left </i>
+                                </button>
+                                <button class="featured-product-carousel-next btn btn-sm btn-link-dark text-decoration-none d-flex justify-content-center align-items-center">
+                                    <i class="material-icons"> chevron_right </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="heading bg-light d-flex justify-content-between align-items-center w-100 p-3 mb-4">
+                            <h6 class="m-0">Women's 2019 Fasion's</h6>
+                        </div>
+                        <div class="featured-product-carousel swiper-container position-relative">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <div class="discound-banner position-absolute bg-primary text-white px-3"> - 30% </div>
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/women/1.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/women/f1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/women/2.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/women/f2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/women/3.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/women/f3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/women/4.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/women/f4.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/women/5.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/women/f5.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-4">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="heading bg-light d-flex justify-content-between align-items-center w-100 p-3 mb-4">
+                            <h6 class="m-0">Men's 2019 Fasion's</h6>
+                        </div>
+                        <div class="featured-product-carousel swiper-container position-relative">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <div class="discound-banner position-absolute bg-primary text-white px-3"> - 30% </div>
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/men/1.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/men/f1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/men/2.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/men/f2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/men/3.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/men/f3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/men/4.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/men/f4.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!--Product Box Start-->
+                                    <div class="product d-flex flex-column justify-content-between align-items-center w-100 h-100">
+                                        <!--Product Image Start-->
+                                        <div class="images">
+                                            <a href="#">
+                                                <img class="first-image w-100" src="assets/img/product/men/5.jpg" alt="">
+                                                <img class="second-image w-100" src="assets/img/product/men/f5.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--Product Image End-->
+                                        <div class="product-footer border border-light d-flex flex-column justify-content-center align-items-center w-100">
+                                            <!--Product Title Start-->
+                                            <div class="title mt-2">
+                                                <a class="text-dark" href="#">Lighthouse Lantern</a>
+                                            </div>
+                                            <!--Product Title End-->
+                                            <!--Product Price Start-->
+                                            <div class="price mt-2">
+                                                <del>30.000</del>
+                                                <span class="text-primary ml-2">35.000</span>
+                                            </div>
+                                            <!--Product Price End-->
+                                            <!--Product Btns Start-->
+                                            <div class="add-the-cart d-flex justify-content-between align-items-center border-top pt-2 mt-2 pb-2 mb-2">
+                                                <button class="btn btn-sm btn-link-dark font-weight-bold flex-fill d-flex justify-content-between align-items-center w-100 "> Add The Basket</button>
+                                            </div>
+                                            <!--Product Btns End-->
+                                        </div>
+                                    </div>
+                                    <!--Product Box End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-banner d-flex flex-column justify-content-center align-items-center text-center text-dark w-100 h-100 p-4" style="background-image: url('assets/img/product/menCat.jpg')">
+                            <h6> Women Special 2019 Fasihon's</h6>
+                            <a href="#" class="btn btn-sm btn-outline-dark mt-4">All Collections</a>
+                            <div class="slider-navigation d-flex justify-content-center align-items-center mt-4">
+                                <button class="featured-product-carousel-prev btn btn-sm btn-link-dark text-decoration-none d-flex justify-content-center align-items-center">
+                                    <i class="material-icons"> chevron_left </i>
+                                </button>
+                                <button class="featured-product-carousel-next btn btn-sm btn-link-dark text-decoration-none d-flex justify-content-center align-items-center">
+                                    <i class="material-icons"> chevron_right </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!--Main Content End--> @@include('./lib/footer/footer.html') @@include('./lib/script.html')
+    <!--Main Content End-->
+    <!--=include ./lib/footer/footer.html -->
+    <!--=include ./lib/script.html -->
 </body>
 
 </html>
