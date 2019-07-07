@@ -14,9 +14,10 @@
 ============================================================================================
 
 /* =============== Include Plugins =============== */
+
 	//=require ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
-	//=require ../../node_modules/swiper/dist/js/swiper.js
-	//=require ../../node_modules/aos/dist/aos.js
+		//=require ../../node_modules/swiper/dist/js/swiper.min.js
+
 /* =============== Include Plugins =============== */  
 
 /* =============== Custom Include Js =============== */
